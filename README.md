@@ -52,6 +52,35 @@ npm run build
 npm run preview
 ```
 
+## 🌐 部署
+
+### GitHub Pages (自动部署)
+
+本项目已配置 GitHub Actions 自动部署到 GitHub Pages。
+
+**访问地址**: https://emog2026.github.io/emog2026/
+
+**触发方式**:
+- 推送代码到 `main` 分支
+- 在 GitHub Actions 页面手动触发
+
+详细配置说明请查看: [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md)
+
+### 本地构建
+
+```bash
+# 构建生产版本
+npm run build
+
+# 输出目录: dist/
+```
+
+### 其他平台
+
+- **Vercel**: 参见 [DEPLOYMENT.md](./DEPLOYMENT.md)
+- **Netlify**: 参见 [DEPLOYMENT.md](./DEPLOYMENT.md)
+- **Docker**: 参见 [DEPLOYMENT.md](./DEPLOYMENT.md)
+
 ## 🔑 数据存储
 
 本项目使用 **GitHub API + JSON 文件** 作为数据存储方案。
