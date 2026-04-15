@@ -7,6 +7,11 @@ on:
 
   # 允许手动触发部署
   workflow_dispatch:
+    inputs:
+      reason:
+        description: '部署原因'
+        required: false
+        default: 'Manual deployment'
 
 # 设置 GITHUB_TOKEN 的权限，允许部署到 GitHub Pages
 permissions:
