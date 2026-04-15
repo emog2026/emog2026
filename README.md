@@ -22,16 +22,21 @@
 - **HTTP**: Axios
 - **日期处理**: Day.js
 - **工具库**: @vueuse/core
+- **数据存储**: GitHub API + JSON 文件
 
 ## 📦 安装
 
 ```bash
 # 克隆项目
-git clone <repository-url>
-cd abab-tools-clone
+git clone https://github.com/emog2026/emog2026.git
+cd emog2026
 
 # 安装依赖
 npm install
+
+# 配置 GitHub Token（必须）
+cp .env.example .env
+# 编辑 .env 文件，填入你的 GitHub Token
 ```
 
 ## 🚀 开发
@@ -46,6 +51,32 @@ npm run build
 # 预览生产构建
 npm run preview
 ```
+
+## 🔑 数据存储
+
+本项目使用 **GitHub API + JSON 文件** 作为数据存储方案。
+
+### 数据存储方式
+
+- **文件位置**: `src/data/tools.json`
+- **API**: GitHub REST API
+- **读写权限**: 通过 GitHub Personal Access Token
+
+### 配置步骤
+
+1. **创建 GitHub Token**
+   - 访问: https://github.com/settings/tokens
+   - 生成新的 Personal Access Token
+   - 权限: `public_repo` (公开仓库) 或 `repo` (私有仓库)
+
+2. **配置环境变量**
+   ```bash
+   cp .env.example .env
+   # 编辑 .env 文件
+   VITE_GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   ```
+
+详细配置指南请查看: [GITHUB_API_SETUP.md](./GITHUB_API_SETUP.md)
 
 ## 📁 项目结构
 
